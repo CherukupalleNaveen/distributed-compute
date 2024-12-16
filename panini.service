@@ -1,0 +1,12 @@
+[Unit]
+Description=Swecha Panini Cluster
+After=multi-user.target
+
+[Service]
+User=panini
+Type=simple
+Restart=always
+ExecStart=/usr/local/bin/run.sh %I
+
+[Install]
+WantedBy=multi-user.target
